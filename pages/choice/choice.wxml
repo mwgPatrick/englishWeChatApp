@@ -1,0 +1,7 @@
+<!--pages/choice/choice.wxml-->
+
+<view class='des'><text>点击下方“开始做题”按钮即可开始做题，题目共分为选择题和判断题两种题型，只需点击你认为正确的答案，并点击“确认”即可。中途可随时退出。</text>
+
+<view class='butt'><button class='sub' bindtap='getQuestion'>开始做题</button><button class='exit' bindtap='errorlist'>错题复习</button></view>
+
+</view>

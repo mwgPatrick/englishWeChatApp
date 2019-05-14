@@ -1,0 +1,8 @@
+<!--pages/randword/randword.wxml-->
+<view class='allpage'>
+<block wx:for="{{value}}" wx:for-item="val">
+    <view class="val-item">{{index + 1}}. {{val.word}}<view class='translation'>{{val.translation}}</view></view>
+  </block>
+
+  <view class='butt'><button class='sub' bindtap='change'>换一批</button><button class='exit' bindtap='exit'>退出</button></view>
+</view>

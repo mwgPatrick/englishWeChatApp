@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<view class='word'>{{word}}</view>
+<view class='phon'  bindtap='play'>{{phon}}<image class='play' src='/images/play.svg'></image></view>
+<view class="translation">
+  <block wx:for="{{test}}" wx:for-item="log">
+    <text class="log-item">{{log}}</text>
+  </block> 
+</view>
+<view class="webde">
+<view class='web'>{{web}}</view>
+  <block wx:for="{{webdetail}}" wx:for-item="we">
+    <view class="web-item-key">{{we.key}}</view>
+    <view class="web-item-value">{{we.value}}</view>
+  </block> 
+</view>
+<view class='userinfo'><image class='userinfo-avatar' bindtap='back' src='/images/close.svg'></image></view>
+

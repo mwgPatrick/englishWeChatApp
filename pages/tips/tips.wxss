@@ -1,0 +1,38 @@
+/* pages/tips/tips.wxss */
+.tip{
+  color:rgba(7, 7, 7, 0.699);
+  font-size:0.8rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  border-top: 0.1rpx solid;
+  padding-top: 30rpx;
+}
+
+.title{
+  color:black;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+
+page{
+
+  background-color: rgb(247, 244, 244);
+  background-size: 100% 100%;
+  background-position: fixed;
+  
+}
+
+
+.backimage{
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: #64492bc0;
+  border-radius: 50%;
+} 

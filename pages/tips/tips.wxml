@@ -1,0 +1,6 @@
+<!--pages/tips/tips.wxml-->
+<view>
+<image class='backimage' bindtap='change' src='/images/change.png'></image>
+<view class="title">{{title}}</view>
+<view class='tip'>{{tip}}</view>
+</view>

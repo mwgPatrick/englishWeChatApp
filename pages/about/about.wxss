@@ -1,0 +1,13 @@
+/* pages/about/about.wxss */
+@import "/pages/article/article.wxss";
+
+.aboutart{
+  width: 87%;
+  margin-top: 3%;
+  padding-top: 30%;
+  border-top: 0.1px solid;
+  text-align: left;
+  padding-bottom: 20%;
+  font-size: 0.8rem;
+  line-height: 150%;
+}

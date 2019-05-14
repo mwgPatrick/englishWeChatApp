@@ -1,0 +1,13 @@
+<view class='title'>统计</view>
+<view class='errorquest'>做题统计:</view>
+<canvas class='canvas' canvas-id="canvas1"></canvas>
+<view class='errorquest'>其他统计:</view>
+<view class = 'bottom'>
+<view class='arow'><text class='rowleft'>阅读文章数量:</text> <text class='rowright'>{{countArticle}}</text> </view>
+<view class='arow'><text class='rowleft'>文章平均阅读时间:</text> <text class='rowright'>{{avgReadTime}}</text> </view>
+<view class='arow'><text class='rowleft'>文章总阅读时间:</text> <text class='rowright'>{{sumReadTime}}</text> </view>
+<view class='arow'><text class='rowleft'>总阅读词量:</text> <text class='rowright'>{{sumReadWord}}</text> </view>
+<view class='arow'><text class='rowleft'>查询单词量:</text> <text class='rowright'>{{wordSearch}}</text> </view>
+<view class='arow'><text class='rowleft'>做题总次数:</text> <text class='rowright'>{{countQues}}</text> </view>
+<view class='arow'><text class='rowleft'>做题正确率:</text> <text class='rowright'>{{rightRate}}</text> </view>
+</view>

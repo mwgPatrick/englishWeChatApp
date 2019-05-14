@@ -1,21 +1,55 @@
 /**index.wxss**/
-.userinfo {
+.ArticleTitle{
+  margin: 5%;
+  border: 1px solid rgba(52, 76, 97, 0.575);  
+  border-radius: 10px; 
+  box-shadow: rgb(73, 71, 71) 7rpx 7rpx 3rpx;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.art-img{
+  margin-top: 3%;
+  margin-left: 6%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+ /* width: 44%;*/
+  height: 130px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.time-author{
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.art-item-time{
+
+  font-size: 0.7rem;
+  color:rgb(129, 50, 3) ;
+}
+.art-item-title{
+  margin-left:3%;
+  margin-right: 3%;
+  font-family: 'Microsoft YaHei';
+  font-size: 1.1rem;
+}
+.art-item-author{
+  font-size: 0.9rem;
+  font-family: 'STSong';
+}
+.button{
+  display: flex;
+  margin-top:5%;
+  margin-bottom: 5%;
+  background: #664a2c;
+  color: white;
+  font-size: 0.9rem;
+}
+.butt{
+  display: flex;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+page{
+   background-color: rgb(247, 244, 244);
 }

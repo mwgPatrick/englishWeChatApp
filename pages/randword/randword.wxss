@@ -1,0 +1,49 @@
+/* pages/randword/randword.wxss */
+page{
+  background-color: rgb(247, 244, 244);
+}
+
+.allpage{
+  margin-top: 20%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.val-item{
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 1.4rem;
+}
+.translation{
+  margin-left: 7%;
+  font-size: 1.1rem;
+}
+.sub{
+  margin-top: 11%;
+  margin-bottom: 7%;
+  background: #1b8ba7;
+  color: rgb(236, 236, 236);
+  width: 160rpx;
+  height: 65rpx;
+  font-size: 0.9rem;
+}
+.butt{
+  position: fixed;
+  width: 94%;
+  bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.exit{
+  margin-top: 11%;
+  margin-bottom: 7%;
+  background: #b60707;
+  color: rgb(236, 236, 236);
+  width: 160rpx;
+  height: 65rpx;
+  font-size: 0.9rem;
+}

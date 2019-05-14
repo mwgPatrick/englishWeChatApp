@@ -1,0 +1,105 @@
+/* pages/word/word.wxss */
+
+    .search{  
+      width: 80%;  
+    }  
+    .search_arr {  
+      border: 1px solid #000000;  
+      border-radius: 10rpx;  
+      margin-left: 20rpx;  
+    }  
+    .search_arr input{  
+      margin-left: 60rpx;  
+      height: 60rpx;  
+      border-radius: 5px;  
+    }  
+    .bc_text {  
+      line-height: 68rpx;  
+      height: 68rpx;  
+      margin-top: 34rpx;  
+    }  
+      
+    .sousuo {  
+      margin-left: 15rpx;  
+      width: 15%;  
+      line-height: 150%;  
+      text-align: center;  
+      border: 1px solid #000000;  
+      border-radius: 10rpx;  
+    }  
+    .page_row{  
+      display: flex;  
+      flex-direction: row;
+      margin-top: 10%; 
+    }  
+    .searchcion {  
+      margin: 10rpx 10rpx 10rpx 10rpx;  
+      position: absolute;  
+      left:25rpx;  
+      z-index: 2;  
+      width: 20px;  
+      height: 20px;  
+      text-align: center;  
+    }  
+
+    .word{
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .translation{
+      border-top: 0.1rpx solid;
+      margin-top: 3%;
+      font-size: 1.2rem;
+      margin-left: 5%;
+      margin-right:5%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .phon{
+      color:rgb(129, 50, 3) ;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    page{
+      background-color: rgb(247, 244, 244);
+    }
+
+.webde{
+  margin-top:3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-top: 0.1rpx dashed;
+}
+.web{
+  margin-top: 3%;
+}
+.web-item-key{
+  color: rgb(52, 76, 97);
+}
+.web-item-value{
+  margin-left: 5%;
+}
+.play{
+  width: 50rpx;
+  height: 50rpx;
+}
+.button{
+  display: flex;
+  margin-top:15%;
+  margin-bottom: 5%;
+  background: #664a2c;
+  color: white;
+  font-size: 0.9rem;
+  width: 190rpx;
+  height: 65rpx;
+}

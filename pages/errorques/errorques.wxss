@@ -1,0 +1,2 @@
+/* pages/errorques/errorques.wxss */
+@import "/pages/question/question.wxss";

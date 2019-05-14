@@ -1,0 +1,23 @@
+<!--pages/setting/setting.wxml-->
+<view class='allpage'>
+<view class='row'>
+<text class='textU'>用户昵称</text><input class='inputU' placeholder='{{user.userName}}' maxlength='12' bindinput='userName' ></input>
+</view>
+<view class='row'>
+<text class='textU'>性别</text>
+<picker bindchange='changeSex' class='current' value='{{index}}' range='{{array}}'>{{array[index]}}</picker></view>
+
+<view class='row'>
+<text class='textU'>Tel</text><input class='inputU' placeholder='{{user.contactNumber}}' maxlength='15' bindinput='contactNumber'></input>
+</view>
+<view class='row'>
+<text class='textU'>E-Mail</text><input class='inputU' placeholder='{{user.contactEmail}}' maxlength='20' bindinput='contactEmail'></input>
+</view>
+<view class='row'>
+<text class='textU'>QQ</text><input class='inputU' placeholder='{{user.contactQq}}' maxlength='12' bindinput='contactQq'></input>
+</view>
+
+
+</view>
+
+<button class='button' bindtap='updateUserInfo'>提交修改</button>

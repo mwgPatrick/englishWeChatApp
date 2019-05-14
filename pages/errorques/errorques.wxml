@@ -1,0 +1,15 @@
+<!--pages/errorques/errorques.wxml-->
+<view class='allPage'>
+<view class='question'>{{question}}</view>
+<view class='authorTime'>
+<text class='author'>{{author}}</text>于<text class='time'>{{time}}</text>提供
+</view>
+<view class='answer'>
+<view class="markA " bindtap='selectA'>{{markA}}</view>
+<view class="markB" bindtap='selectB'>{{markB}}</view>
+<view class="markC {{isRuleTrue?'isRuleShow':'isRuleHide'}}"  bindtap='selectC'>{{markC}}</view>
+<view class="markD {{isRuleTrue?'isRuleShow':'isRuleHide'}}"  bindtap='selectD'>{{markD}}</view>
+</view>
+<view class='butt'><button class='sub' bindtap='back'>前一题</button><button class='exit' bindtap='go'>后一题</button></view>
+<view class='correct'>{{correct}}</view>
+</view>

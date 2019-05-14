@@ -1,0 +1,133 @@
+/* pages/article/article.wxss */
+page{
+   background-color: rgb(247, 244, 244);
+}
+
+.pageall{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head{
+  width: 87%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title{
+  font-family: 'Microsoft YaHei';
+  font-size: 1.4rem;
+  color: rgb(114, 74, 0)
+}
+.author{
+  color: rgb(93, 119, 110);
+
+}
+.time{
+  font-size: 0.6rem;
+  color: rgb(143, 194, 177);
+}
+.author-time{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  /*font-size: 0.6rem;*/
+}
+
+.article{
+  margin-top:3%;
+  padding-top: 3%;
+  border-top-color: rgb(45, 53, 13);
+  border-top:1rpx solid;
+  /* margin-left:3%;
+  margin-right: 3%; */
+  width: 87%;
+  font-size: 1rem;
+  color: rgb(53, 52, 52);
+  font-family:  '';
+}
+.combutton{
+  margin-top:5%;
+  margin-bottom: 5%;
+  background: #664a2c;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.isRuleShow{
+    display: block;
+}
+.isRuleHide{
+    display: none;
+}
+.ruleZhezhao{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color:rgba(0, 0, 0, .5);
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.ruleZhezhaoContent{
+    padding: 20rpx 0;
+    width: 80%;
+    background: #e1d2b1;
+    margin: 40% auto;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.ruleZhezhaoText{
+    width: 80%;
+    font-size: 30rpx;
+    color: #856d5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25rpx 0 25rpx 0;
+}
+.count{
+    color: #fff;
+    font-size: 40rpx;
+    height: 60rpx;
+    width: 60rpx;
+    background: #664a2c;
+    display: block;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    margin-right: 10rpx;
+}
+.readtime{
+    flex-wrap:wrap;
+    width: 80%;
+}
+.ruleHide{
+    height: 60rpx!important;
+    width: 60rpx!important;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}
+.rule{
+    display: block;
+    border: 1px solid #fff;
+    width: 100rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #fff;
+    height: 60rpx;
+    font-size: 30rpx;
+    border-radius: 30rpx;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}

@@ -1,0 +1,49 @@
+/* pages/choice/choice.wxss */
+page{
+  background-color: rgb(247, 244, 244);
+}
+
+.des{
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.des text{
+  margin-left: 6%;
+  margin-right: 6%;
+  font-size: 0.9rem;
+}
+
+.butt{
+  position: fixed;
+  width: 94%;
+  bottom: 33%;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.exit{
+  margin-top: 11%;
+  margin-bottom: 7%;
+  background: #b60707;
+  color: rgb(236, 236, 236);
+  width: 190rpx;
+  height: 65rpx;
+  font-size: 0.9rem;
+}
+
+.sub{
+  margin-top: 11%;
+  margin-bottom: 7%;
+  background: #1b8ba7;
+  color: rgb(236, 236, 236);
+  width: 190rpx;
+  height: 65rpx;
+  font-size: 0.9rem;
+}

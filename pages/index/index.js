@@ -4,69 +4,107 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Welcome!',
     userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    article:[],
+    start:0,
+    end:10,
+    imageUrl:app.globalData.baseURL + '/image/m_logo.png'
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  //事件处理函数,
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
+    this.getArticleTitle(this.data.start, this.data.end);  
+  },
+  onReachBottom: function () {
+    
+  },
+  getArticleTitle:function(st,en){
+    console.log(st)
+    var that = this;
+    wx.request({
+      url: app.globalData.baseURL + '/article/getRangeTitle',
+      data:{
+        start: st,
+        end: en
+      },
+      header: {
+        'content-type': 'application/json' //默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        var article = res.data;
+        if(res.data.length!=0){
+          that.setData({
+            //imageUrl:app.globalData.baseURL + article.imageUrl,
+            article: res.data,
+            start: that.data.start + 10,
           })
         }
+        else{
+          wx.showToast({
+            title: '已到最后',
+            image: '/images/check-circle.svg',
+            duration: 300,
+            mask: true,
+            success: function (res) { },
+            fail: function (res) { },
+            complete: function (res) { },
+          })
+        }
+        
+      }
+
+    })
+  },
+  getArticleDetail:function(e){
+    console.log(e.target.dataset.text);
+    var id = e.target.dataset.text
+
+    if (app.globalData.user != null) {
+      wx.navigateTo({
+        url: '/pages/article/article?id=' + id
       })
     }
+    else {
+      wx.showToast({
+        title: '请先注册/登录',
+        image: '/images/alert-circle.svg',
+        duration: 1000,
+        mask: true,
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+
+    
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  getMore:function(){
+    this.getArticleTitle(this.data.start, this.data.end);
   },
-  login: function () {
-    wx.login({
-      success: function (res) {
-        console.log(res.code)
-        //发送请求
-        wx.request({
-          url: 'http://localhost:8090/user/login', //接口地址
-          data: { code: res.code },
-          header: {
-            'content-type': 'application/json' //默认值
-          },
-          success: function (res) {
-            console.log(res.data)
-          }
-        })
-      }
-    })
+  getBack:function(){
+    var start = this.data.start;
+    console.log(start)
+    if(start>=20){
+      this.setData({
+        start: start - 20
+      })
+    }
+    else{
+      this.setData({
+        start: start - 10
+      })
+      wx.showToast({
+        title: '已到最前',
+        image: '/images/alert-circle.svg',
+        duration: 300,
+        mask: true,
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+    this.getArticleTitle(this.data.start, this.data.end);
   }
+  
 })

@@ -1,0 +1,89 @@
+/* pages/search/search.wxss */
+    .word{
+      margin-top: 20%;
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .translation{
+      border-top: 0.1rpx solid;
+      margin-top: 3%;
+      font-size: 1.2rem;
+      margin-left: 5%;
+      margin-right:5%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .phon{
+      color:rgb(129, 50, 3) ;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    page{
+      background-color: rgb(247, 244, 244);
+    }
+
+.webde{
+  margin-top:3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-top: 0.1rpx dashed;
+}
+.web{
+  margin-top: 3%;
+}
+.web-item-key{
+  color: rgb(52, 76, 97);
+}
+.web-item-value{
+  margin-left: 5%;
+}
+.back_but{
+  width: 85rpx;
+  height: 85rpx;
+  border: 1px solid #000000;
+  border-radius: 50%
+}
+
+
+.backimage{
+  position: fixed;
+  bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+} 
+.image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.userinfo {
+  position: fixed;
+  bottom: 30rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.play{
+  width: 50rpx;
+  height: 50rpx;
+}

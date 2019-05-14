@@ -1,0 +1,30 @@
+<!--pages/article/article.wxml-->
+<view class='pageall'>
+
+<view class='head'>
+  <text class='title'>{{article.title}}</text>
+  <view class='author-time'>
+    <text class='author'>{{article.author}}</text>
+    <text class='time'>{{article.createTime}}</text>
+  </view>  
+</view>
+
+<!-- <view class='article'>{{article.article}}</view> -->
+<view class='article'>
+  <block wx:for="{{art}}" wx:for-item="artt" >
+  <text data-text='{{artt}}' bindtap='getWord'>{{artt}} </text>
+  </block>
+</view>
+
+<button class='combutton' bindtap='updateWordCount'>完成阅读</button>
+</view>
+
+<view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+        <view class='ruleZhezhaoContent'>
+        <view class='ruleZhezhaoText'>
+        <text class="readtime">本次阅读了{{article.wordCount}}字</text>
+        <text class='readtime'>{{readtime}}</text></view>
+        <text class='count' bindtap='hideRule'>OK</text>
+        <image src='/images/close.svg' class='ruleHide' bindtap='hideRule'></image>
+        </view>
+</view>

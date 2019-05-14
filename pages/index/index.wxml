@@ -1,14 +1,12 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view>
+  <block wx:for="{{article}}" wx:key="id" wx:for-item="art">
+  <view class="ArticleTitle" data-text='{{art.id}}' bindtap='getArticleDetail'>
+    <text class="art-item-title" data-text='{{art.id}}' >{{art.title}}</text>
+    <image class='art-img' mode='aspectFill' data-text='{{art.id}}' src='{{art.imageUrl}}'></image>
+    <view class="time-author" data-text='{{art.id}}'>
+    <text  data-text='{{art.id}}' class='art-item-author'>{{art.author}}</text><text  data-text='{{art.id}}' class="art-item-time">{{art.createTime}}</text></view>
   </view>
-  <button bindtap='login'>登录</button>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  </block> 
+  <view class='butt'><button class='button' bindtap='getBack'>查看前一页</button><button  class='button' bindtap='getMore'>查看更多</button></view>  
 </view>

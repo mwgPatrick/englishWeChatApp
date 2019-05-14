@@ -1,0 +1,30 @@
+<!--pages/user/user.wxml-->
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 一键注册 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{user.userName}} {{userSex}}</text>
+    </block>
+  </view>
+<view class="userdetail">
+<!-- <view>用户Id:{{user.userId}}</view> -->
+
+<view class='userdetext'>做题总数: <text>{{user.questionCount}}\n</text>
+阅读词量: <text>{{user.readWordCount}}\n</text>
+阅读文章: <text>{{user.readArticleCount}}</text> 篇</view>
+</view>
+<view class='foot'>
+<view bindtap='tongji'><image class='footimg' src='/images/propaganda.svg'></image><text class='foottext'>本月统计</text><image class='right' src='/images/chevron-right.svg'></image></view>
+<view bindtap='about'><image class='footimg' src='/images/star.svg'></image><text class='foottext'>关于小程序</text><image class='right' src='/images/chevron-right.svg'></image></view>
+<view bindtap='fankui'><image class='footimg' src='/images/chat.svg'></image><text class='foottext'>反馈</text><image class='right' src='/images/chevron-right.svg'></image></view>
+<view  bindtap='setting'><image class='footimg' src='/images/edit.svg'></image><text class='foottext'>设置</text><image class='right' src='/images/chevron-right.svg'></image></view>
+</view>
+
+<view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+        <view class='ruleZhezhaoContent'>
+        <view class='ruleZhezhaoText'>
+        <text class="readtime">将打开客服聊天界面</text></view>
+        <button class='kefu' bindtap='kefu' open-type='contact'>确认</button>
+        <image src='/images/close.svg' class='ruleHide' bindtap='hideRule'></image>
+        </view>
+</view>

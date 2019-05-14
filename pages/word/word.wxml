@@ -1,0 +1,31 @@
+<!--pages/word/word.wxml-->
+<view class='page_row' >  
+  <view class="search">  
+    <view class="df search_arr">  
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class=""  placeholder="请输入单词" maxlength='40' value="{{searchValue}}" bindinput='word'/>  
+  </view>  
+  </view>  
+  <view class='sousuo'  bindtap="searchWord">搜索</view>  
+</view>  
+<!-- <button bindtap="enterViewTap">test</button> -->
+<view class='word'>{{word}}</view>
+<view class='phon' bindtap='play'>{{phon}} <image class='play' src='/images/play.svg'></image></view>
+
+<view class="translation">
+  <block wx:for="{{test}}" wx:for-item="log">
+    <text class="log-item">{{log}}</text>
+  </block> 
+</view>
+
+<view class="webde">
+<view class='web'>{{web}}</view>
+  <block wx:for="{{webdetail}}" wx:for-item="we">
+    <view class="web-item-key">{{we.key}}</view>
+    <view class="web-item-value">{{we.value}}</view>
+  </block> 
+</view>
+
+
+<button class='button' bindtap='random'>随便背背</button>
+

@@ -1,0 +1,26 @@
+<!--pages/question/question.wxml-->
+<view class='allPage'>
+<view class='question'>{{question}}</view>
+<view class='authorTime'>
+<text class='author'>{{author}}</text>于<text class='time'>{{time}}</text>提供
+</view>
+<view class='answer'>
+<view class="markA {{isA?'backa':'backb'}}" bindtap='selectA'>{{markA}}</view>
+<view class="markB {{isB?'backa':'backb'}}" bindtap='selectB'>{{markB}}</view>
+<view class="markC {{isC?'backa':'backb'}} {{isRuleTrue?'isRuleShow':'isRuleHide'}}"  bindtap='selectC'>{{markC}}</view>
+<view class="markD {{isD?'backa':'backb'}} {{isRuleTrue?'isRuleShow':'isRuleHide'}}"  bindtap='selectD'>{{markD}}</view>
+</view>
+
+<view class='butt'><button class='sub' bindtap='submit'>提交</button><button class='exit' bindtap='exit'>退出</button></view>
+</view>
+
+
+<view class="ruleZhezhao {{isRuleTrueMa?'isRuleShow':'isRuleHide'}}">
+        <view class='ruleZhezhaoContent'>
+        <view class='ruleZhezhaoText'>
+        <text class="readtime">{{daan}}</text>
+        <text class='readtime'>{{remark}}</text></view>
+        <text class='count' bindtap='hideRule'>OK</text>
+        <image src='/images/close.svg' class='ruleHide' bindtap='hideRule'></image>
+        </view>
+</view>
