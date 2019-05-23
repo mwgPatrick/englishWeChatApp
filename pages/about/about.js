@@ -1,18 +1,42 @@
 // pages/about/about.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    about:'',
+    time:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: app.globalData.baseURL + '/tips/getAbout',
+      header: ({
+        "context-type": "text/xml"
+      }),
+      method: "GET",
+      dataType: 'json',
+      success: function (res) {
+        //console.log('getdata.() success');
+        console.log(res.data);
+        that.setData({
+          about: res.data.about,
+          time:res.data.time
+        })
+      },
+      fail: function (res) {
+        console.log('getRandomTip.() fail');
+      },
+      complete: function (res) {
+        console.log('getRandomTip.() complete');
+      }
+    })
   },
 
   /**

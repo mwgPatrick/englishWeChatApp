@@ -5,14 +5,14 @@
   <text class='title'>关于本微信小程序</text>
   <view class='author-time'>
     <text class='author'>Patrick</text>
-    <text class='time'>2019-5-4 13:44:34</text>
+    <text class='time'>{{time}}</text>
   </view>  
 </view>
 
 <!-- <view class='article'>{{article.article}}</view> -->
 <view class='aboutart'>
-  <text>本小程序是为了方便英语学习而开发，提供：做题（选择/判断）、单词查询、英语文章阅读等三大功能。\n后台服务端使用Java基于SpringBoot+Mybatis框架开发。\n</text>
-  <text>\n\n</text>
+  <text>{{about}}</text>
+  <text>\n</text>
   <text>山东科技大学\n</text>
   <text>计算机2015-1\n</text>
   <text>Patrick</text>

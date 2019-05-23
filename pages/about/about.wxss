@@ -4,7 +4,7 @@
 .aboutart{
   width: 87%;
   margin-top: 3%;
-  padding-top: 30%;
+  padding-top: 25%;
   border-top: 0.1px solid;
   text-align: left;
   padding-bottom: 20%;

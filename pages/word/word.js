@@ -1,5 +1,6 @@
 // pages/word/word.js
 const app = getApp()
+
 //var word = 'SunGlow'
 Page({
 
@@ -174,8 +175,10 @@ Page({
               test: ["未查到"]
             })
           self.setData({
-            speakurl: res.data.speakUrl
+            speakurl: res.data.speakUrl,
+            
           })
+          
           // wx.showToast({
           //   title: 'ok',
           //   icon: 'success'
@@ -186,6 +189,7 @@ Page({
         },
         complete: function (res) {
           console.log('getdata.() complete');
+          
         }
 
 
@@ -251,18 +255,18 @@ Page({
     })
   },
   play:function(){
-    const version = wx.getSystemInfoSync().SDKVersion;
-    if (util.compareVersion(version, '2.3.0') >= 0) {
-      wx.setInnerAudioOption({
-        obeyMuteSwitch: false
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '当前微信版本过低，静音模式下可能会导致播放音频失败。'
-      })
-    }
-    var innerAudioContext = wx.createInnerAudioContext();
+    // const version = wx.getSystemInfoSync().SDKVersion;
+    // if (util.compareVersion(version, '2.3.0') >= 0) {
+    //   wx.setInnerAudioOption({
+    //     obeyMuteSwitch: false
+    //   })
+    // } else {
+    //   wx.showModal({
+    //     title: '提示',
+    //     content: '当前微信版本过低，静音模式下可能会导致播放音频失败。'
+    //   })
+    // }
+    var innerAudioContext = wx.createInnerAudioContext()
     innerAudioContext.src = this.data.speakurl;
     innerAudioContext.play();
   },

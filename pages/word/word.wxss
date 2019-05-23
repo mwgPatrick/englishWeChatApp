@@ -93,13 +93,27 @@
   width: 50rpx;
   height: 50rpx;
 }
-.button{
+/* .button{
   display: flex;
   margin-top:15%;
   margin-bottom: 5%;
   background: #664a2c;
   color: white;
   font-size: 0.9rem;
-  width: 190rpx;
+  text-align: center;
+  width: 280rpx;
   height: 65rpx;
+} */
+
+.button{
+  display: flex;
+  margin-top:5%;
+  margin-bottom: 5%;
+  background: #664a2c;
+  color: white;
+  font-size: 0.9rem;
+  height: 70rpx;
+}
+.butt{
+  display: flex;
 }

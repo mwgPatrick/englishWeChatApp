@@ -35,7 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseURL:'http://localhost:9080'
-
+    baseURL:'https://www.write1bug.cn'
   }
 })

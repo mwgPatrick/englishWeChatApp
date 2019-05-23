@@ -39,8 +39,8 @@ Page({
         console.log(res.data);
         that.setData({
           countArticle:res.data.countArticle,
-          sumReadTime:Math.floor(res.data.sumReadTime/3600) + '时' + Math.floor(Math.floor(res.data.sumReadTime/3600)/60) + '分' + res.data.sumReadTime%60 + '秒',
-          avgReadTime: Math.floor(res.data.avgReadTime / 3600) + '时' + Math.floor(Math.floor(res.data.avgReadTime / 3600) / 60) + '分' + res.data.avgReadTime % 60 + '秒',
+          sumReadTime:Math.floor(res.data.sumReadTime/3600) + '时' + Math.floor(Math.floor(res.data.sumReadTime%3600)/60) + '分' + res.data.sumReadTime%60 + '秒',
+          avgReadTime: Math.floor(res.data.avgReadTime / 3600) + '时' + Math.floor(Math.floor(res.data.avgReadTime % 3600) / 60) + '分' + res.data.avgReadTime % 60 + '秒',
           sumReadWord:res.data.sumReadWord,
           countQues:res.data.countQues,
           countRight:res.data.countRight,

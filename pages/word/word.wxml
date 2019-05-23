@@ -26,6 +26,4 @@
   </block> 
 </view>
 
-
-<button class='button' bindtap='random'>随便背背</button>
-
+  <view class='butt'><button class='button' bindtap='random'>记五个单词</button></view>
